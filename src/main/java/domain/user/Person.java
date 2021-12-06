@@ -7,12 +7,15 @@ import domain.card.Card;
 
 public class Person {
 	protected final List<Card> cards = new ArrayList<>();
-
 	public List<Card> getCards() {
 		return cards;
 	}
 
 	public void addCard(Card card) {
 		cards.add(card);
+	}
+
+	public int sumCards() {
+		return cards.stream().mapToInt(card -> card.getSymbol().getScore()).sum();
 	}
 }

@@ -9,6 +9,7 @@ import java.util.stream.IntStream;
 import domain.card.Card;
 import domain.card.CardFactory;
 import domain.user.Dealer;
+import domain.user.Person;
 import domain.user.Player;
 
 public class CardManager {
@@ -24,6 +25,10 @@ public class CardManager {
 			dealer.addCard(getOneCard());
 			playerList.stream().forEach(player -> player.addCard(getOneCard()));
 		}
+	}
+
+	public void giveOneCard(Person person) {
+		person.addCard(getOneCard());
 	}
 
 	private Card getOneCard() {

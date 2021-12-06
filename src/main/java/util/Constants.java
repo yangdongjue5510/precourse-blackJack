@@ -10,4 +10,6 @@ public class Constants {
 	public static final String ERROR = "[ERROR]";
 	public static final String ERROR_INVALID_STRING = ERROR + " ERROR_INVALID_STRING";
 	public static final String ERROR_INVALID_NUMBER = ERROR + " ERROR_INVALID_NUMBER";
+	public static final String ERROR_INVALID_YES_NO = ERROR + " ERROR_INVALID_YES_NO";
+
 }

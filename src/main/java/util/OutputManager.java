@@ -27,6 +27,10 @@ public class OutputManager {
 		System.out.println(stringBuilder);
 	}
 
+	public static void showPlayerCards(Player player) {
+		System.out.println(player.getName()+ " : " + getCardString(player));
+	}
+
 	public static void showCardStatus(Dealer dealer, List<Player> list) {
 		System.out.println("딜러 : " + getCardString(dealer));
 		list.stream()
@@ -50,5 +54,9 @@ public class OutputManager {
 		int stringIndex = stringBuilder.length();
 		stringBuilder.delete(stringIndex -2 , stringIndex-1);
 		return stringBuilder.toString();
+	}
+
+	public static void askPlayerGetCard(String name) {
+		System.out.println(name + "는 카드를 더 받겠습니까?(예는 y, 아니오는 n)");
 	}
 }

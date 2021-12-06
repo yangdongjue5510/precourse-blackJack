@@ -15,4 +15,8 @@ public class ExceptionMaker {
 	public static void invalidNumberException() {
 		exceptionMake(ERROR_INVALID_NUMBER);
 	}
+
+	public static void invalidYesOrNoException() {
+		exceptionMake(ERROR_INVALID_YES_NO);
+	}
 }

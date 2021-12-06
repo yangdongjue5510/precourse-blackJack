@@ -23,6 +23,13 @@ public class InputManager {
 		return Double.parseDouble(inputLine);
 	}
 
+	public static boolean inputUserGetCard() {
+		String inputLine;
+		do {
+			inputLine = scanner.nextLine();
+		} while(!isNoExceptionYesNo(inputLine));
+		return isYesString(inputLine);
+	}
 
 	private static String[] splitByComma(String inputLine) {
 		return inputLine.split(COMMA);
@@ -46,4 +53,19 @@ public class InputManager {
 		}
 	}
 
+	private static boolean isNoExceptionYesNo(String string) {
+		try {
+			ValidChecker.isValidYesNo(string);
+			return true;
+		} catch (IllegalArgumentException exception) {
+			return false;
+		}
+	}
+
+	private static boolean isYesString(String string) {
+		if (string.equals("y")) {
+			return true;
+		}
+		return false;
+	}
 }

@@ -13,6 +13,12 @@ public class ValidChecker {
 		}
 	}
 
+	public static void isValidYesNo(String string) {
+		if (!string.equals("y") && !string.equals("n")) {
+			ExceptionMaker.invalidYesOrNoException();
+		}
+	}
+
 	private static void isNotEmptyString(String string) {
 		if (string.equals("")) {
 			ExceptionMaker.invalidStringException();
