@@ -8,7 +8,7 @@ public class ValidChecker {
 	}
 
 	private static void isNotEmptyString(String string) {
-		if (string == null) {
+		if (string.equals("")) {
 			ExceptionMaker.invalidStringException();
 		}
 	}
