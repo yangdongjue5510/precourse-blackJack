@@ -15,6 +15,15 @@ public class InputManager {
 		return splitString;
 	}
 
+	public static double inputUserBetting() {
+		String inputLine;
+		do {
+			inputLine = scanner.nextLine();
+		} while(!isNoExceptionNumber(inputLine));
+		return Double.parseDouble(inputLine);
+	}
+
+
 	private static String[] splitByComma(String inputLine) {
 		return inputLine.split(COMMA);
 	}
@@ -27,4 +36,14 @@ public class InputManager {
 			return false;
 		}
 	}
+
+	private static boolean isNoExceptionNumber(String string) {
+		try {
+			ValidChecker.isValidLong(string);
+			return true;
+		} catch (IllegalArgumentException exception) {
+			return false;
+		}
+	}
+
 }

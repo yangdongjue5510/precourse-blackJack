@@ -11,4 +11,8 @@ public class ExceptionMaker {
 	public static void invalidStringException() {
 		exceptionMake(ERROR_INVALID_STRING);
 	}
+
+	public static void invalidNumberException() {
+		exceptionMake(ERROR_INVALID_NUMBER);
+	}
 }

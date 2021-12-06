@@ -18,8 +18,10 @@ public class BlackJackPlayer {
 
 	private void setPlayers() {
 		OutputManager.askUserNames();
-		String[] strings = InputManager.inputUserNames();
-
+		for(String name : InputManager.inputUserNames()) {
+			OutputManager.askUserBetting(name);
+			players.add(new Player(name, InputManager.inputUserBetting()));
+		}
 	}
 
 }
