@@ -33,9 +33,14 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card{" +
-                "symbol=" + symbol +
-                ", type=" + type +
-                '}';
+        return symbol.getScore() + type.getKoreanType();
+    }
+
+    public Symbol getSymbol() {
+        return symbol;
+    }
+
+    public Type getType() {
+        return type;
     }
 }
